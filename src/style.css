@@ -1,11 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url("./test-bg.jpg");
+    margin: 0;
+    background: url("./images/restuarant_bg.png") no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: "HyliaSerif";
+    src: url("./fonts/HyliaSerifBeta-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+body>* {
+    background-color: #000919d9;
+    color: #dedede;
+    font-family: "OpenSans";
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+.title {
+    font-family: "HyliaSerif";
+    font-size: 48px;
+}
+
+.btn-list {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-list button {
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.btn-list button:hover {
+    margin-top: -16px;
+}
+
+.courage:hover,
+.courage:active,
+.courage.clicked {
+    color: #65df6f;
+}
+
+.power:hover,
+.power:active,
+.power.clicked {
+    color: #df6565;
+}
+
+.wisdom:hover,
+.wisdom:active,
+.wisdom.clicked {
+    color: #6593df;
 }
 
 #content {
-    background-color: #d3d300;
+    font-size: 48px;
+}
+
+footer {
+    margin-top: auto;
 }

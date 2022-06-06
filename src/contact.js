@@ -2,7 +2,7 @@ import castleRestaurant from "./images/Hyrule_Castle.png"
 
 function contactPage() {
     const contactDiv = document.createElement("div");
-    contactDiv.classList.add('contact')
+    contactDiv.classList.add('contact', 'invisible')
     
     let restuarantImg = document.createElement("img")
     restuarantImg.src = castleRestaurant

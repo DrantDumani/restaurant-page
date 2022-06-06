@@ -7,13 +7,13 @@ import meatRice from "./images/prime_meat_and_rice_bowl.png"
 import paella from "./images/seafood_pealla.png"
 import vegeCurry from "./images/vegetable_curry.png"
 
-const foodArr = [[clamChowder, "Clam Chowder", "20"], 
-[simFruit, "Copious Simmered Fruit", "10"],
-[meatCurry, "Gourmet Meat Curry", "70"], 
-[heartSoup, "Creamy Heart Soup", "40"],
-[honeyFruits, "Honeyed Fruit", "5"], 
-[meatRice, "Prime Meat and Rice Bowl", "50"],
-[paella, "Seafood Pealla", "50"], 
+const foodArr = [[clamChowder, "Clam Chowder", "20", "Milk, Rice, Butter, and a fresh hearty blueshell snail"], 
+[simFruit, "Copious Simmered Fruit", "10", "A variety of fresh fruit picked daily"],
+[meatCurry, "Gourmet Meat Curry", "70", "Gourmet Meat, Hylian Rice, and a touch of Goron spice"], 
+[heartSoup, "Creamy Heart Soup", "40", "Fresh Milk, Hearty Radishes, one Hydromelon, and one Voltfruit"],
+[honeyFruits, "Honeyed Fruit", "5", "Courser bee honey drizzled lightly over an assortment of delicious fruit"], 
+[meatRice, "Prime Meat and Rice Bowl", "50", "Prime Meat and Hylian Rice, seasoned with aged rock salt"],
+[paella, "Seafood Pealla", "50", "Hylian Rice and an assortment of fresh vegetables, layered with Goron spice"], 
 [vegeCurry, "Vegetable Curry", "30"]]
 
 function menu() {
@@ -33,10 +33,13 @@ function menu() {
         foodName.textContent = meal[1]
         foodName.classList.add("food-name")
 
+        const foodDesc = document.createElement("span")
+        foodDesc.textContent = meal[3]
+
         const foodPrice = document.createElement("span")
         foodPrice.classList.add("food-price")
         foodPrice.textContent = `\$${meal[2]}`
-        card.append(cardImg, foodName, foodPrice)
+        card.append(cardImg, foodName, foodDesc, foodPrice)
         
         div.append(card)
     }

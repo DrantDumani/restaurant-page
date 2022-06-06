@@ -54,7 +54,7 @@ function createHeader(){
 function createFooter(){
     const footer = document.createElement("footer")
     const footerText = document.createElement("p")
-    footerText.textContent = "2022. Made by Darnell. View more projects "
+    footerText.textContent = "2022. Made by Darnell. "
 
     const ghLink = document.createElement("a")
     ghLink.classList.add("footer-link")

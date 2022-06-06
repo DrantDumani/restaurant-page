@@ -13,8 +13,8 @@ const foodArr = [[clamChowder, "Clam Chowder", "20", "Milk, Rice, Butter, and a 
 [heartSoup, "Creamy Heart Soup", "40", "Fresh Milk, Hearty Radishes, one Hydromelon, and one Voltfruit"],
 [honeyFruits, "Honeyed Fruit", "5", "Courser bee honey drizzled lightly over an assortment of delicious fruit"], 
 [meatRice, "Prime Meat and Rice Bowl", "50", "Prime Meat and Hylian Rice, seasoned with aged rock salt"],
-[paella, "Seafood Pealla", "50", "Hylian Rice and an assortment of fresh vegetables, layered with Goron spice"], 
-[vegeCurry, "Vegetable Curry", "30"]]
+[paella, "Seafood Pealla", "50", "Fresh seafood cooked with Hylian Rice, butter, and rock salt"], 
+[vegeCurry, "Vegetable Curry", "30", "Hylian Rice and an assortment of fresh vegetables, layered with Goron spice"]]
 
 function menu() {
     const div = document.createElement("div");
@@ -34,6 +34,7 @@ function menu() {
         foodName.classList.add("food-name")
 
         const foodDesc = document.createElement("span")
+        foodDesc.classList.add("food-desc")
         foodDesc.textContent = meal[3]
 
         const foodPrice = document.createElement("span")
